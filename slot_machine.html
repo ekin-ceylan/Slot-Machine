@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Slot 2.0</title>
+    <script src="jquery-2.1.3.min.js"></script>
+    <script src="sevenSegment.js"></script>
+    <script src="slot.js"></script>
+    <link href="sevenSegment.css" rel="stylesheet" />
+    <link href="slot.css" rel="stylesheet" />
+
+    <script>
+        window.onload = function () {
+            hazirla();
+            bhs = 0;
+            krd = 100;
+            win = 0;
+            panelEkle("#sgmnt td:nth-child(1)", 4, "Krd");
+            panelEkle("#sgmnt td:nth-child(2)", 1, "Bet");
+            panelEkle("#sgmnt td:nth-child(3)", 4, "Paid");
+            load(40, 15);
+            yaz(krd, "Krd");
+            yaz(win, "Paid");
+            yaz(bhs, "Bet");
+        }
+
+    </script>
+
+</head>
+<body >
+    <script>
+        //document.createElement("img").onload = load2;
+    </script>
+    <!--<img src="Slot/win.jpg" width="10" onload="load2()" />-->
+
+    <table class="ata">
+        <tr>
+            <td>
+                <div class="kutu">
+                    <div class="film"></div>
+                    <canvas id="tual" width="120" height="360"></canvas>
+                </div>
+            </td>
+            <td>
+                <div class="kutu">
+                    <div class="film"></div>
+                    <canvas id="tual2" width="120" height="360"></canvas>
+                </div>
+            </td>
+            <td>
+                <div class="kutu">
+                    <div class="film"></div>
+                    <canvas id="tual3" width="120" height="360"></canvas>
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <table class="ata">
+        <tr id="sgmnt">
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr class="yazi">
+            <td>CREDITS</td>
+            <td>BET</td>
+            <td>WIN</td>
+        </tr>
+    </table>
+
+    
+    <div id="rotate-x" class="container">
+        <div class ="pnl">
+            <table style="margin:auto">
+                <tr>
+                    <td>
+                        <input id="btnSpin" class="bt1" type="button" value="Spin" onclick="baslat()" />
+                    </td>
+                    <td>
+                        <input id="btnBetMax" class="bt1" type="button" value="Bet Max" onclick="betMax()" />
+                    </td>
+                    <td>
+                        <input id="btnBetOne" class="bt1" type="button" value="Bet One" onclick="betOne()" />
+                    </td>
+                    <td>
+                        <input id="btnReset" class="bt1" type="button" value="Reset" onclick="reset()" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

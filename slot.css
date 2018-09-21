@@ -1,0 +1,211 @@
+﻿body {
+}
+#btnSpin:active, #btnReset:active, #btnBetMax:active, #btnBetOne:active{
+    background-image: -moz-linear-gradient(bottom, #fff771 0%, #fffaa1 100%);
+    background-image: -webkit-linear-gradient(bottom, #fff771 0%, #fffaa1 100%);
+    background-image: -ms-linear-gradient(bottom, #fff771 0%, #fffaa1 100%);
+    background-image: linear-gradient(bottom, #fff771 0%, #fffaa1 100%);
+}
+
+#btnSpin:active {
+    -moz-transform: translate(4px, 12px);
+    -webkit-transform: translate(4px, 12px);
+    -ms-transform: translate(4px, 12px);
+    transform: translate(4px, 12px);
+    box-shadow: 1px 4px 0px #555, 2px 7px 0px #555;
+}
+#btnReset:active {
+    -moz-transform: translate(-4px, 12px);
+    -webkit-transform: translate(-4px, 12px);
+    -ms-transform: translate(-4px, 12px);
+    transform: translate(-4px, 12px);
+    box-shadow: -1px 4px 0px #555, -2px 7px 0px #555;
+}
+#btnBetMax:active {
+    -moz-transform: translate(2px, 12px);
+    -webkit-transform: translate(2px, 12px);
+    -ms-transform: translate(2px, 12px);
+    transform: translate(2px, 12px);
+    box-shadow:1px 7px 0px #555;
+}
+#btnBetOne:active {
+    -moz-transform: translate(-2px, 12px);
+    -webkit-transform: translate(-2px, 12px);
+    -ms-transform: translate(-2px, 12px);
+    transform: translate(-2px, 12px);
+    box-shadow:-1px 7px 0px #555;
+}
+
+.bt1{
+    color: #000;
+    font-weight: bold;
+    margin-right:2px;
+    margin-left:2px;
+    margin:20px;
+    width:120px;
+    height:120px;
+    font-size: 24px;
+    border: 1px solid #aeaeae;
+    text-shadow: 0px -1px 0px #fff;
+    background-image: -moz-linear-gradient(bottom, #bebebe 0%, #dedede 100%);
+    background-image: -webkit-linear-gradient(bottom, #bebebe 0%, #dedede 100%);
+    background-image: -ms-linear-gradient(bottom, #bebebe 0%, #dedede 100%);
+    background-image: linear-gradient(bottom, #bebebe 0%, #dedede 100%);
+    border-radius: 10px;
+}
+
+.bt1:hover {
+    background-image: -moz-linear-gradient(bottom, #c1c1c1 0%, #f1f1f1 100%);
+    background-image: -webkit-linear-gradient(bottom, #c1c1c1 0%, #f1f1f1 100%);
+    background-image: -ms-linear-gradient(bottom, #c1c1c1 0%, #f1f1f1 100%);
+    background-image: linear-gradient(bottom, #c1c1c1 0%, #f1f1f1 100%);
+}
+
+#btnBetMax {
+    box-shadow: 3px 19px 0px #555, 2px 13px 0px #555, 1px 7px 0px #555;
+}
+
+#btnBetOne {
+    box-shadow: -3px 19px 0px #555, -2px 13px 0px #555, -1px 7px 0px #555;
+}
+
+#btnSpin {
+    box-shadow: 1px 4px 0px #555, 2px 7px 0px #555, 3px 10px 0px #555, 4px 13px 0px #555, 5px 16px 0px #555, 6px 19px 0px #555;
+}
+
+#btnReset {
+    box-shadow: -1px 4px 0px #555, -2px 7px 0px #555, -3px 10px 0px #555, -4px 13px 0px #555, -5px 16px 0px #555, -6px 19px 0px #555;
+}
+
+.container {
+    height: 180px;
+    position: relative;
+    -webkit-perspective: 600px;
+    -moz-perspective: 600px;
+    -o-perspective: 600px;
+    perspective: 600px;
+    padding-left: 10%;
+}
+
+.pnl {
+    width: 80%;
+    height: 100%;
+    position: absolute;
+}
+
+#rotate-x .pnl {
+    -webkit-transform: rotateX( 45deg );
+    -moz-transform: rotateX( 45deg );
+    -o-transform: rotateX( 45deg );
+    transform: rotateX( 45deg );
+}
+
+.ata {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.kutu{
+    border-radius: 15px;
+    border:5px solid gray;
+    display:inline-flex;
+    position:relative;
+    padding-bottom:5px;
+    padding:7px;
+    background-color: #000000;
+    margin:20px;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+
+.yazi{
+    color:gray;
+    font-family:Arial;
+    font-weight:bold;
+    font-size:20px;
+    height:25px;
+    top:100px;
+    padding:0
+}
+
+.yazi td:nth-child(1){
+    text-shadow: 2px -2px 0px #111, 1px -1px 0px #111;
+}
+.yazi td:nth-child(2){
+    text-shadow: 0px -2px 0px #111;
+}
+.yazi td:nth-child(3){
+    text-shadow: -2px -2px 0px #111,-1px -1px 0px #111;
+}
+
+.film{
+    width:120px;
+    height:360px;
+    position:absolute;
+    background: -moz-linear-gradient(top, black 1%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.1) 25%, transparent 45%, transparent 50%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.5) 90%, black 99%);
+    background: -webkit-linear-gradient(top, black 1%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.1) 25%, transparent 45%, transparent 50%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.5) 90%, black 99%);
+    background: -ms-linear-gradient(top, black 1%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.1) 25%, transparent 45%, transparent 50%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.5) 90%, black 99%);
+    background: linear-gradient(top, black 1%, rgba(0,0,0,0.5) 10%, rgba(0,0,0,0.1) 25%, transparent 45%, transparent 50%, rgba(0,0,0,0.1) 75%, rgba(0,0,0,0.5) 90%, black 99%);
+    z-index:1;
+}
+
+.ata td:nth-child(1) .film:before{
+    content:"";
+    box-shadow: 5px 0px 0px 2px black, -5px 0px 0px 2px black;
+    position: absolute;
+    width:120px;
+    height:360px;
+    left: 0;
+    top: 0;
+    border-radius: 1px / 180px;
+    border-top-left-radius: 7px  180px;
+    border-bottom-left-radius: 7px  180px;
+}
+.ata td:nth-child(2) .film:before{
+    content:"";
+    box-shadow: 5px 0px 0px 2px black, -5px 0px 0px 2px black;
+    position: absolute;
+    width:120px;
+    height:360px;
+    left: 0;
+    top: 0;
+    border-radius: 5px / 180px;
+}
+.ata td:nth-child(3) .film:before{
+    content:"";
+    box-shadow: 5px 0px 0px 2px black, -5px 0px 0px 2px black;
+    position: absolute;
+    width:120px;
+    height:360px;
+    left: 0;
+    top: 0;
+    border-radius: 1px / 180px;
+    border-top-right-radius: 7px  180px;
+    border-bottom-right-radius: 7px  180px;
+}
+
+#sgmnt td:nth-child(1) .panel {
+    box-shadow: 2px -1px 0px 1px #222;
+}
+
+#sgmnt td:nth-child(2) .panel{
+    box-shadow: 0px -1px 0px 1px #222;
+}
+
+#sgmnt td:nth-child(3) .panel{
+    box-shadow: -2px -1px 0px 1px #222;
+}
+
+.ata td:nth-child(1) .kutu {
+    box-shadow: 3px 0px 0px 1px #222;
+}
+
+.ata td:nth-child(2) .kutu{
+    box-shadow: 0px 0px 0px 1px #222;
+}
+
+.ata td:nth-child(3) .kutu{
+    box-shadow: -3px 0px 0px 1px #222;
+}
