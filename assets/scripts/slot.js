@@ -6,6 +6,7 @@ var resimler = ["kiraz.jpg", "portakal.jpg", "erik.jpg",
                 "limon.jpg", "bar.jpg", "7.jpg",
                 //"Slot/karpuz.jpg","Slot/muz.jpg", "Slot/win.jpg"
 ];
+var imagePath = 'assets/images/';
 var prob = [
     [3, 2, 8, 5, 6, 1],
     [6, 9, 5, 1, 3, 1],
@@ -54,7 +55,7 @@ function disk() {
             this.ikon[i] = img;
             var a = rulet(probs.slice());
             probs[a] = probs[a] - 1;
-            img.src = "Slot/" + resimler[a];
+            img.src = imagePath + resimler[a];
         }
     }
 }
@@ -100,9 +101,9 @@ function don() {
 }
 
 function hesapla() {
-    var dsk1 = diskler[0].ikon[(diskler[0].j + 1) % adet].src.split("Slot/")[1];
-    var dsk2 = diskler[1].ikon[(diskler[1].j + 1) % adet].src.split("Slot/")[1];
-    var dsk3 = diskler[2].ikon[(diskler[2].j + 1) % adet].src.split("Slot/")[1];
+    var dsk1 = diskler[0].ikon[(diskler[0].j + 1) % adet].src.split(imagePath)[1];
+    var dsk2 = diskler[1].ikon[(diskler[1].j + 1) % adet].src.split(imagePath)[1];
+    var dsk3 = diskler[2].ikon[(diskler[2].j + 1) % adet].src.split(imagePath)[1];
     
 
     if (dsk1 == resimler[5] && dsk2 == resimler[5] && dsk3 == resimler[5] ) {

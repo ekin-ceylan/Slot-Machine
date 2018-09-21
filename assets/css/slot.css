@@ -1,5 +1,8 @@
 ﻿body {
+    margin: 0;
+    padding: 0;
 }
+
 #btnSpin:active, #btnReset:active, #btnBetMax:active, #btnBetOne:active{
     background-image: -moz-linear-gradient(bottom, #fff771 0%, #fffaa1 100%);
     background-image: -webkit-linear-gradient(bottom, #fff771 0%, #fffaa1 100%);
@@ -14,6 +17,7 @@
     transform: translate(4px, 12px);
     box-shadow: 1px 4px 0px #555, 2px 7px 0px #555;
 }
+
 #btnReset:active {
     -moz-transform: translate(-4px, 12px);
     -webkit-transform: translate(-4px, 12px);
@@ -21,6 +25,7 @@
     transform: translate(-4px, 12px);
     box-shadow: -1px 4px 0px #555, -2px 7px 0px #555;
 }
+
 #btnBetMax:active {
     -moz-transform: translate(2px, 12px);
     -webkit-transform: translate(2px, 12px);
@@ -28,6 +33,7 @@
     transform: translate(2px, 12px);
     box-shadow:1px 7px 0px #555;
 }
+
 #btnBetOne:active {
     -moz-transform: translate(-2px, 12px);
     -webkit-transform: translate(-2px, 12px);
