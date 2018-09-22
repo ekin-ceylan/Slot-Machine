@@ -3,8 +3,7 @@ var cizimAlani = [];
 var diskler = [];
 var a = 0;
 var resimler = ["kiraz.jpg", "portakal.jpg", "erik.jpg",
-                "limon.jpg", "bar.jpg", "7.jpg",
-                //"Slot/karpuz.jpg","Slot/muz.jpg", "Slot/win.jpg"
+                "limon.jpg", "bar.jpg", "7.jpg" //,"karpuz.jpg","muz.jpg", "win.jpg"
 ];
 var imagePath = 'assets/images/';
 var prob = [
@@ -18,16 +17,19 @@ var tOut = 0;
 var adet = 25;
 
 function rulet(probs) {
-    var total = 0;
-    for (var i in probs) {
+    let total = 0;
+
+    for (let i in probs) {
         total += probs[i];
     }
 
-    var r = Math.random() * total;
-    var i = 0;
+    let r = Math.random() * total;
+    let i = 0;
+
     for (; probs[i] < r; i++) {
         probs[i + 1] = probs[i + 1] + probs[i];
     }
+
     return i
 }
 
@@ -35,10 +37,12 @@ function hazirla() {
     cizimAlani = [document.getElementById("tual").getContext("2d"),
                   document.getElementById("tual2").getContext("2d"),
                   document.getElementById("tual3").getContext("2d")];
-    for (var i = 0; i < 3; i++) {
+
+    for (let i = 0; i < 3; i++) {
         diskler[i] = new disk();
         diskler[i].olustur(adet, prob[i], i);
     }
+
     diskler[2].ikon[adet - 1].onload = ciz;
 }
 
@@ -50,10 +54,10 @@ function disk() {
     this.yon = 1;
 
     this.olustur = function (sayi, probs, z) {
-        for (var i = 0; i < sayi; i++) {
-            var img = document.createElement("img");
+        for (let i = 0; i < sayi; i++) {
+            let img = document.createElement("img");
             this.ikon[i] = img;
-            var a = rulet(probs.slice());
+            let a = rulet(probs.slice());
             probs[a] = probs[a] - 1;
             img.src = imagePath + resimler[a];
         }
@@ -69,11 +73,13 @@ function baslat() {
     win = 0;
     yaz(win, "Paid");
     yaz(krd, "Krd");
+
     for (var i = 0; i < 3; i++) {
         diskler[i].hiz = 15;
         diskler[i].yon = 1;
         diskler[i].j = adet * 1000 + diskler[i].j % adet;
     }
+
     sayac = -1;
     timer = setInterval(don, 10)
 }
@@ -86,12 +92,15 @@ function don() {
             sayac++;
         }, Math.round(Math.random() * 3000) + 100) ;
     }
+
     for (var i = 0; i < 3; i++) {
         diskler[i].y = (diskler[i].y + diskler[i].hiz) % 120
         if (diskler[i].y == 0) { diskler[i].j += diskler[i].yon; }
         if (sayac == i && diskler[i].y == 0) { diskler[i].hiz = 0; diskler[i].yon = 0; }
     }
+
     ciz();
+
     if (!(diskler[0].hiz + diskler[1].hiz + diskler[2].hiz)) {
         clearInterval(timer);
         clearTimeout(tOut);
@@ -131,7 +140,6 @@ function hesapla() {
         win = 3;
     }
 
-
     krd += win * bhs;
 
     yaz(win, "Paid");
@@ -148,23 +156,25 @@ function hesapla() {
 function ciz() {
     for (var m = 0; m < 3; m++) {
         var a = diskler[m];
+
         for (var i = 0; i < 4; i++) {
             cizimAlani[m].drawImage(a.ikon[(i + a.j) % adet], 0, 0, 133, 133, 0, - a.yon * a.y + i * 120, 120, 120);
         }
     }
 }
 
-
 function betMax() {
     if (timer) {
         return;
     }
+
     if (krd < 9) {
         bhs = krd;
     }
     else {
         bhs = 9;
     }
+
     yaz(bhs, "Bet");
 }
 
@@ -172,6 +182,7 @@ function betOne() {
     if (timer) {
         return;
     }
+
     if (bhs < krd && bhs < 9) {
         bhs++;
         yaz(bhs, "Bet");
@@ -182,6 +193,7 @@ function reset() {
     if (timer) {
         return;
     }
+
     bhs = 0;
     yaz(bhs, 'Bet');
 }
