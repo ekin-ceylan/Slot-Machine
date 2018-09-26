@@ -2,11 +2,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Slot 2.0</title>
-    <script src="assets/scripts/jquery-2.1.3.min.js"></script>
-    <script src="assets/scripts/sevenSegment.js"></script>
+    <script src="https://cdn.rawgit.com/ekin-ceylan/Seven-Segment/master/seven-segment.js"></script>
     <script src="assets/scripts/slot.js"></script>
 
-    <link href="assets/css/sevenSegment.css" rel="stylesheet" />
+    <link href="https://cdn.rawgit.com/ekin-ceylan/Seven-Segment/master/seven-segment.css" rel="stylesheet" />
     <link href="assets/css/slot.css" rel="stylesheet" />
 
     <script>
@@ -15,9 +14,9 @@
             bhs = 0;
             krd = 100;
             win = 0;
-            panelEkle("#sgmnt td:nth-child(1)", 4, "Krd");
-            panelEkle("#sgmnt td:nth-child(2)", 1, "Bet");
-            panelEkle("#sgmnt td:nth-child(3)", 4, "Paid");
+            panelEkle(document.querySelectorAll('#sgmnt td:nth-child(1)')[0], 4, "Krd");
+            panelEkle(document.querySelectorAll('#sgmnt td:nth-child(2)')[0], 1, "Bet");
+            panelEkle(document.querySelectorAll('#sgmnt td:nth-child(3)')[0], 4, "Paid");
             load(40, 15);
             yaz(krd, "Krd");
             yaz(win, "Paid");
